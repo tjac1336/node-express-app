@@ -26,7 +26,8 @@ app.get('/', function (req, res) {
     '/greeting/yourname <br>' +
     '/yo/Dr.Rogers <br>' +
     '/fortune <br>' +
-    '/fancy/?first=Denise&last=Case <br>' +
+    '/fancy/?first=Tyler&last=Jacobson <br>' +
+    '/danger <br>' +
     '<br> <br>' +
     'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
   )
@@ -82,6 +83,10 @@ app.get('/fortune', (req,res) => {
   }
 })
 
+app.get('/danger', (req, res) => {
+  res.send('<h1 style="color:red">DANGER! <p>YOUR COMPUTER WILL SELF DESTRUCT IN</p> <p>3..</p> <p>2..</p> <p>1.......</p></h1>')
+})
+
 // Use middleware to handle all non-managed routes (e.g. /xyz)
 // https://expressjs.com/en/api.html#req.originalUrl
 app.use((req, res, next) => {
@@ -99,6 +104,7 @@ app.listen(port, hostname, () => {
   console.log(`   Try /greeting/yourname`)
   console.log(`   Try /yo/Dr.Rogers`)
   console.log(`   Try /fancy/?first=Denise&last=Case`)
+  console.log(`   Try /danger`)
   console.log('\n Hit CTRL-C CTRL-C to stop\n')
 })
 

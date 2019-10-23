@@ -7,7 +7,8 @@
     "url": "https://github.com/denisecase/node-express-app/issues"
   },
   "contributors": [
-    "Denise Case <dcase@nwmissouri.edu> (https://github.com/profcase)"
+    "Denise Case <dcase@nwmissouri.edu> (https://github.com/profcase)",
+    "Tyler Jacobson <s523556@nwmissouri.edu> (https://github.com/tjac1336"
   ],
   "dependencies": {
     "config": "latest",
